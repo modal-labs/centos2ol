@@ -644,7 +644,7 @@ esac
 
 if "${install_uek_kernel}"; then
     echo "Switching default boot kernel to the UEK."
-    uek_path=$(find /boot -name "vmlinuz-*.el${os_version}uek.${arch}")
+    uek_path=$(find /boot -name "vmlinuz-*.el${major_os_version}uek.${arch}")
     grubby --set-default="${uek_path}"
 fi
 
